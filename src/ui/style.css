@@ -1,0 +1,124 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #14171c;
+  color: #d7dde6;
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+#viewport {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+#viewport canvas {
+  display: block;
+}
+
+#panel {
+  width: 330px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  padding: 14px 16px 24px;
+  background: #1b2027;
+  border-left: 1px solid #2c333d;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 4px 0 12px;
+}
+
+h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8fa1b8;
+  margin: 0 0 8px;
+}
+
+section {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #262d37;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+
+select,
+button {
+  background: #242b35;
+  color: #d7dde6;
+  border: 1px solid #3a4452;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+}
+
+button:hover {
+  background: #2d3644;
+}
+
+input[type='range'] {
+  flex: 1;
+  min-width: 80px;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.mono {
+  font-family: 'Cascadia Code', 'JetBrains Mono', Consolas, monospace;
+  font-size: 12.5px;
+}
+
+.metrics {
+  margin: 0;
+}
+
+.metrics div {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+
+.metrics dt {
+  color: #8fa1b8;
+}
+
+.metrics dd {
+  margin: 0;
+}
+
+.dim {
+  color: #77839a;
+  font-size: 12px;
+}
+
+.legend {
+  line-height: 1.6;
+}

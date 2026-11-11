@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>影视走位预演 · 根运动分离与重组</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="viewport"></div>
+      <aside id="panel">
+        <h1>走位预演</h1>
+
+        <section>
+          <h2>片段</h2>
+          <select id="clipSelect">
+            <option value="straight">直行（匀速 1.4 m/s）</option>
+            <option value="turn">转弯（圆弧累计 405°）</option>
+            <option value="asymmetric">前后不对称（进-停-退）</option>
+          </select>
+          <div class="row">
+            <button id="playBtn">暂停</button>
+            <label><input type="checkbox" id="reverseChk" /> 倒放</label>
+            <label><input type="checkbox" id="loopChk" checked /> 循环</label>
+          </div>
+          <div class="row">
+            <label for="speedRange">速度</label>
+            <input type="range" id="speedRange" min="0.1" max="3" step="0.05" value="1" />
+            <span id="speedVal">1.00×</span>
+          </div>
+          <div class="row">
+            <label for="seekRange">跳转</label>
+            <input type="range" id="seekRange" min="0" max="4" step="0.01" value="0" />
+          </div>
+          <div class="row">
+            <button id="prevCycleBtn">−1 周期</button>
+            <button id="nextCycleBtn">+1 周期</button>
+            <span id="timeVal" class="mono"></span>
+          </div>
+          <div class="row">
+            <label><input type="checkbox" id="followChk" /> 相机跟随</label>
+          </div>
+        </section>
+
+        <section>
+          <h2>根运动分量</h2>
+          <dl class="mono metrics">
+            <div><dt>位置 X</dt><dd id="posX"></dd></div>
+            <div><dt>位置 Y</dt><dd id="posY"></dd></div>
+            <div><dt>位置 Z</dt><dd id="posZ"></dd></div>
+            <div><dt>朝向（连续）</dt><dd id="yawVal"></dd></div>
+            <div><dt>轨迹速度</dt><dd id="trajSpeed"></dd></div>
+            <div><dt>有效速度</dt><dd id="effSpeed"></dd></div>
+            <div><dt>转向角速度</dt><dd id="yawRate"></dd></div>
+          </dl>
+        </section>
+
+        <section>
+          <h2>与原动画对比</h2>
+          <label><input type="checkbox" id="ghostChk" checked /> 显示原动画（红色）</label>
+          <div class="row"><span>骨骼最大误差</span><span id="errVal" class="mono"></span></div>
+          <div class="row"><span>根路径偏差</span><span id="pathErrVal" class="mono"></span></div>
+        </section>
+
+        <section>
+          <h2>数据</h2>
+          <div class="row">
+            <button id="exportBtn">导出分离动画 + 轨迹</button>
+            <button id="importBtn">载入</button>
+            <input type="file" id="fileInput" accept=".json,application/json" hidden />
+          </div>
+          <p id="dataStatus" class="dim"></p>
+        </section>
+
+        <p class="dim legend">绿：重组结果（原地动画 × 轨迹）　红：原动画　蓝线：根运动轨迹　箭头：当前朝向</p>
+      </aside>
+    </div>
+    <script type="module" src="/src/ui/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,545 @@
+{
+  "format": "blocking-previs/verification/1",
+  "generatedAt": "2026-11-11T20:13:14.599Z",
+  "project": "stage-blocking-demo",
+  "overallPass": true,
+  "checks": [
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "source-params",
+      "expected": "{\"fps\":30,\"moves\":[{\"speed\":1.4,\"to\":[0,2.8],\"type\":\"walkTo\"},{\"direction\":\"ccw\",\"type\":\"turnTo\",\"yawDeg\":180,\"yawRateDeg\":180},{\"duration\":0.6,\"type\":\"wait\"}],\"rootScale\":1,\"segmentId\":\"enter-walk-stop\",\"start\":{\"pos\":[0,0,0.5],\"yawDeg\":0},\"units\":\"m\"}",
+      "actual": "{\"fps\":30,\"moves\":[{\"speed\":1.4,\"to\":[0,2.8],\"type\":\"walkTo\"},{\"direction\":\"ccw\",\"type\":\"turnTo\",\"yawDeg\":180,\"yawRateDeg\":180},{\"duration\":0.6,\"type\":\"wait\"}],\"rootScale\":1,\"segmentId\":\"enter-walk-stop\",\"start\":{\"pos\":[0,0,0.5],\"yawDeg\":0},\"units\":\"m\"}",
+      "tolerance": "exact",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "asset-reload",
+      "expected": "<= 0.000001",
+      "actual": "5.066e-7",
+      "tolerance": "0.000001",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "recombine-error",
+      "expected": "<= 0.001",
+      "actual": "5.031e-9",
+      "tolerance": "0.001",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "stop-position",
+      "expected": "[0.000000, 0.000000, 2.800000]",
+      "actual": "[0.000000, 0.000000, 2.800000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "stop-yaw",
+      "expected": "180.000 deg",
+      "actual": "180.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "root-displacement",
+      "expected": "[0.000000, 0.000000, 2.300000]",
+      "actual": "[0.000000, 0.000000, 2.300000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "net-yaw",
+      "expected": "180.000 deg",
+      "actual": "180.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "cycle-consistency",
+      "expected": "[0.000000, 0.000000, 2.800000]",
+      "actual": "[0.000000, 0.000000, 2.800000]",
+      "tolerance": "0.005 m / 0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "units-scale",
+      "expected": "x1",
+      "actual": "x1",
+      "tolerance": "rel 1e-3",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop",
+      "check": "mark-delta",
+      "expected": "0.000 m",
+      "actual": "0.000000 m",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "source-params",
+      "expected": "{\"fps\":30,\"moves\":[{\"direction\":\"cw\",\"headingTo\":[2.4,4.6],\"type\":\"turnTo\",\"yawRateDeg\":150},{\"speed\":1.2,\"to\":[2.4,4.6],\"type\":\"walkTo\"},{\"direction\":\"ccw\",\"type\":\"turnTo\",\"yawDeg\":90,\"yawRateDeg\":150},{\"duration\":0.4,\"type\":\"wait\"}],\"rootScale\":1,\"segmentId\":\"turn-to-window\",\"start\":{\"pos\":[0,0,2.8],\"yawDeg\":180},\"units\":\"m\"}",
+      "actual": "{\"fps\":30,\"moves\":[{\"direction\":\"cw\",\"headingTo\":[2.4,4.6],\"type\":\"turnTo\",\"yawRateDeg\":150},{\"speed\":1.2,\"to\":[2.4,4.6],\"type\":\"walkTo\"},{\"direction\":\"ccw\",\"type\":\"turnTo\",\"yawDeg\":90,\"yawRateDeg\":150},{\"duration\":0.4,\"type\":\"wait\"}],\"rootScale\":1,\"segmentId\":\"turn-to-window\",\"start\":{\"pos\":[0,0,2.8],\"yawDeg\":180},\"units\":\"m\"}",
+      "tolerance": "exact",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "asset-reload",
+      "expected": "<= 0.000001",
+      "actual": "4.992e-7",
+      "tolerance": "0.000001",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "recombine-error",
+      "expected": "<= 0.001",
+      "actual": "3.679e-10",
+      "tolerance": "0.001",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "stop-position",
+      "expected": "[2.400000, 0.000000, 4.600000]",
+      "actual": "[2.400000, 0.000000, 4.600000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "stop-yaw",
+      "expected": "90.000 deg",
+      "actual": "90.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "root-displacement",
+      "expected": "[2.400000, 0.000000, 1.800000]",
+      "actual": "[2.400000, 0.000000, 1.800000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "net-yaw",
+      "expected": "-90.000 deg",
+      "actual": "-90.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "cycle-consistency",
+      "expected": "[2.400000, 0.000000, 4.600000]",
+      "actual": "[2.400000, 0.000000, 4.600000]",
+      "tolerance": "0.005 m / 0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "units-scale",
+      "expected": "x1",
+      "actual": "x1",
+      "tolerance": "rel 1e-3",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window",
+      "check": "mark-delta",
+      "expected": "0.000 m",
+      "actual": "0.000000 m",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "source-params",
+      "expected": "{\"fps\":30,\"moves\":[{\"direction\":\"cw\",\"headingTo\":[-2,5.2],\"type\":\"turnTo\",\"yawRateDeg\":150},{\"speed\":1.4,\"to\":[-2,5.2],\"type\":\"walkTo\"},{\"direction\":\"cw\",\"type\":\"turnTo\",\"yawDeg\":180,\"yawRateDeg\":150},{\"duration\":0.4,\"type\":\"wait\"}],\"rootScale\":1,\"segmentId\":\"cross-to-door\",\"start\":{\"pos\":[2.4,0,4.6],\"yawDeg\":90},\"units\":\"m\"}",
+      "actual": "{\"fps\":30,\"moves\":[{\"direction\":\"cw\",\"headingTo\":[-2,5.2],\"type\":\"turnTo\",\"yawRateDeg\":150},{\"speed\":1.4,\"to\":[-2,5.2],\"type\":\"walkTo\"},{\"direction\":\"cw\",\"type\":\"turnTo\",\"yawDeg\":180,\"yawRateDeg\":150},{\"duration\":0.4,\"type\":\"wait\"}],\"rootScale\":1,\"segmentId\":\"cross-to-door\",\"start\":{\"pos\":[2.4,0,4.6],\"yawDeg\":90},\"units\":\"m\"}",
+      "tolerance": "exact",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "asset-reload",
+      "expected": "<= 0.000001",
+      "actual": "5.066e-7",
+      "tolerance": "0.000001",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "recombine-error",
+      "expected": "<= 0.001",
+      "actual": "4.584e-9",
+      "tolerance": "0.001",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "stop-position",
+      "expected": "[-2.000000, 0.000000, 5.200000]",
+      "actual": "[-2.000000, 0.000000, 5.200000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "stop-yaw",
+      "expected": "-180.000 deg",
+      "actual": "-180.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "root-displacement",
+      "expected": "[-4.400000, 0.000000, 0.600000]",
+      "actual": "[-4.400000, 0.000000, 0.600000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "net-yaw",
+      "expected": "-270.000 deg",
+      "actual": "-270.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "cycle-consistency",
+      "expected": "[-2.000000, 0.000000, 5.200000]",
+      "actual": "[-2.000000, 0.000000, 5.200000]",
+      "tolerance": "0.005 m / 0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "units-scale",
+      "expected": "x1",
+      "actual": "x1",
+      "tolerance": "rel 1e-3",
+      "pass": true
+    },
+    {
+      "segmentId": "cross-to-door",
+      "check": "mark-delta",
+      "expected": "0.000 m",
+      "actual": "0.000000 m",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "source-params",
+      "expected": "{\"fps\":30,\"moves\":[{\"speed\":1.4,\"to\":[0,2.8],\"type\":\"walkTo\"},{\"direction\":\"ccw\",\"type\":\"turnTo\",\"yawDeg\":180,\"yawRateDeg\":180},{\"duration\":0.6,\"type\":\"wait\"}],\"rootScale\":1,\"segmentId\":\"enter-walk-stop-cm\",\"start\":{\"pos\":[0,0,0.5],\"yawDeg\":0},\"units\":\"cm\"}",
+      "actual": "{\"fps\":30,\"moves\":[{\"speed\":1.4,\"to\":[0,2.8],\"type\":\"walkTo\"},{\"direction\":\"ccw\",\"type\":\"turnTo\",\"yawDeg\":180,\"yawRateDeg\":180},{\"duration\":0.6,\"type\":\"wait\"}],\"rootScale\":1,\"segmentId\":\"enter-walk-stop-cm\",\"start\":{\"pos\":[0,0,0.5],\"yawDeg\":0},\"units\":\"cm\"}",
+      "tolerance": "exact",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "asset-reload",
+      "expected": "<= 0.000001",
+      "actual": "5.066e-7",
+      "tolerance": "0.000001",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "recombine-error",
+      "expected": "<= 0.001",
+      "actual": "5.031e-9",
+      "tolerance": "0.001",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "stop-position",
+      "expected": "[0.000000, 0.000000, 2.800000]",
+      "actual": "[0.000000, 0.000000, 2.800000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "stop-yaw",
+      "expected": "180.000 deg",
+      "actual": "180.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "root-displacement",
+      "expected": "[0.000000, 0.000000, 2.300000]",
+      "actual": "[0.000000, 0.000000, 2.300000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "net-yaw",
+      "expected": "180.000 deg",
+      "actual": "180.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "cycle-consistency",
+      "expected": "[0.000000, 0.000000, 2.800000]",
+      "actual": "[0.000000, 0.000000, 2.800000]",
+      "tolerance": "0.005 m / 0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "units-scale",
+      "expected": "x100",
+      "actual": "x100",
+      "tolerance": "rel 1e-3",
+      "pass": true
+    },
+    {
+      "segmentId": "enter-walk-stop-cm",
+      "check": "mark-delta",
+      "expected": "0.000 m",
+      "actual": "0.000000 m",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "source-params",
+      "expected": "{\"fps\":30,\"moves\":[{\"direction\":\"cw\",\"headingTo\":[2.4,4.6],\"type\":\"turnTo\",\"yawRateDeg\":150},{\"speed\":1.2,\"to\":[2.4,4.6],\"type\":\"walkTo\"},{\"direction\":\"ccw\",\"type\":\"turnTo\",\"yawDeg\":90,\"yawRateDeg\":150},{\"duration\":0.4,\"type\":\"wait\"}],\"rootScale\":0.5,\"segmentId\":\"turn-to-window-halfroot\",\"start\":{\"pos\":[0,0,2.8],\"yawDeg\":180},\"units\":\"m\"}",
+      "actual": "{\"fps\":30,\"moves\":[{\"direction\":\"cw\",\"headingTo\":[2.4,4.6],\"type\":\"turnTo\",\"yawRateDeg\":150},{\"speed\":1.2,\"to\":[2.4,4.6],\"type\":\"walkTo\"},{\"direction\":\"ccw\",\"type\":\"turnTo\",\"yawDeg\":90,\"yawRateDeg\":150},{\"duration\":0.4,\"type\":\"wait\"}],\"rootScale\":0.5,\"segmentId\":\"turn-to-window-halfroot\",\"start\":{\"pos\":[0,0,2.8],\"yawDeg\":180},\"units\":\"m\"}",
+      "tolerance": "exact",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "asset-reload",
+      "expected": "<= 0.000001",
+      "actual": "4.992e-7",
+      "tolerance": "0.000001",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "recombine-error",
+      "expected": "<= 0.001",
+      "actual": "3.679e-10",
+      "tolerance": "0.001",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "stop-position",
+      "expected": "[1.200000, 0.000000, 3.700000]",
+      "actual": "[1.200000, 0.000000, 3.700000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "stop-yaw",
+      "expected": "90.000 deg",
+      "actual": "90.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "root-displacement",
+      "expected": "[1.200000, 0.000000, 0.900000]",
+      "actual": "[1.200000, 0.000000, 0.900000]",
+      "tolerance": "0.005 m",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "net-yaw",
+      "expected": "-90.000 deg",
+      "actual": "-90.000 deg",
+      "tolerance": "0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "cycle-consistency",
+      "expected": "[1.200000, 0.000000, 3.700000]",
+      "actual": "[1.200000, 0.000000, 3.700000]",
+      "tolerance": "0.005 m / 0.5 deg",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "units-scale",
+      "expected": "x1",
+      "actual": "x1",
+      "tolerance": "rel 1e-3",
+      "pass": true
+    },
+    {
+      "segmentId": "turn-to-window-halfroot",
+      "check": "mark-delta",
+      "expected": "1.500 m",
+      "actual": "1.500000 m",
+      "tolerance": "0.005 m",
+      "pass": true
+    }
+  ],
+  "segments": [
+    {
+      "id": "enter-walk-stop",
+      "durationSec": 3.233333,
+      "frameCount": 98,
+      "stopPos": [
+        0,
+        0,
+        2.8
+      ],
+      "stopYawDeg": 180,
+      "rootDisplacement": [
+        0,
+        0,
+        2.3
+      ],
+      "netYawDeg": 180,
+      "cycleDelta": [
+        0,
+        0,
+        3.3,
+        180
+      ],
+      "markDelta": 0,
+      "rawUnitsScale": 1,
+      "recombineMaxError": 5.031173924572899e-9,
+      "reloadMaxDiff": 5.066394805908203e-7
+    },
+    {
+      "id": "turn-to-window",
+      "durationSec": 3.966667,
+      "frameCount": 120,
+      "stopPos": [
+        2.4,
+        0,
+        4.6
+      ],
+      "stopYawDeg": 90,
+      "rootDisplacement": [
+        2.4,
+        0,
+        1.8
+      ],
+      "netYawDeg": -90,
+      "cycleDelta": [
+        5.2,
+        0,
+        4.6,
+        -90
+      ],
+      "markDelta": 0,
+      "rawUnitsScale": 1,
+      "recombineMaxError": 3.678879268740948e-10,
+      "reloadMaxDiff": 4.991888999938965e-7
+    },
+    {
+      "id": "cross-to-door",
+      "durationSec": 5.366667,
+      "frameCount": 162,
+      "stopPos": [
+        -2,
+        0,
+        5.2
+      ],
+      "stopYawDeg": -179.999963,
+      "rootDisplacement": [
+        -4.4,
+        0,
+        0.6
+      ],
+      "netYawDeg": -270,
+      "cycleDelta": [
+        -6.6,
+        0,
+        7.6,
+        -270
+      ],
+      "markDelta": 0,
+      "rawUnitsScale": 1,
+      "recombineMaxError": 4.584030935092932e-9,
+      "reloadMaxDiff": 5.066394805908203e-7
+    },
+    {
+      "id": "enter-walk-stop-cm",
+      "durationSec": 3.233333,
+      "frameCount": 98,
+      "stopPos": [
+        0,
+        0,
+        2.8
+      ],
+      "stopYawDeg": 180,
+      "rootDisplacement": [
+        0,
+        0,
+        2.3
+      ],
+      "netYawDeg": 180,
+      "cycleDelta": [
+        0,
+        0,
+        3.3,
+        180
+      ],
+      "markDelta": 0,
+      "rawUnitsScale": 100,
+      "recombineMaxError": 5.031173924572899e-9,
+      "reloadMaxDiff": 5.066394805908203e-7
+    },
+    {
+      "id": "turn-to-window-halfroot",
+      "durationSec": 3.966667,
+      "frameCount": 120,
+      "stopPos": [
+        1.2,
+        0,
+        3.7
+      ],
+      "stopYawDeg": 90,
+      "rootDisplacement": [
+        1.2,
+        0,
+        0.9
+      ],
+      "netYawDeg": -90,
+      "cycleDelta": [
+        4,
+        0,
+        3.7,
+        -90
+      ],
+      "markDelta": 1.5,
+      "rawUnitsScale": 1,
+      "recombineMaxError": 3.678879268740948e-10,
+      "reloadMaxDiff": 4.991888999938965e-7
+    }
+  ]
+}

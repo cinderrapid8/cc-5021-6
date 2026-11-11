@@ -1,0 +1,45 @@
+{
+  "format": "blocking-previs/cameras/1",
+  "shots": [
+    {
+      "id": "shot-1",
+      "segmentId": "enter-walk-stop",
+      "label": "SHOT 1 WIDE DS",
+      "position": [3.6, 2.2, -1.6],
+      "lookAt": [0, 0.9, 2.2],
+      "fov": 50
+    },
+    {
+      "id": "shot-2",
+      "segmentId": "turn-to-window",
+      "label": "SHOT 2 RIGHT",
+      "position": [5.2, 1.8, 2.4],
+      "lookAt": [1.2, 0.9, 3.8],
+      "fov": 45
+    },
+    {
+      "id": "shot-3",
+      "segmentId": "cross-to-door",
+      "label": "SHOT 3 HIGH",
+      "position": [0.5, 6.5, 1.5],
+      "lookAt": [0, 0, 4.6],
+      "fov": 55
+    },
+    {
+      "id": "shot-4",
+      "segmentId": "enter-walk-stop-cm",
+      "label": "SHOT 4 CMP UNITS",
+      "position": [3.6, 2.2, -1.6],
+      "lookAt": [0, 0.9, 2.2],
+      "fov": 50
+    },
+    {
+      "id": "shot-5",
+      "segmentId": "turn-to-window-halfroot",
+      "label": "SHOT 5 CMP ROOT",
+      "position": [5.2, 1.8, 2.4],
+      "lookAt": [1.2, 0.9, 3.8],
+      "fov": 45
+    }
+  ]
+}

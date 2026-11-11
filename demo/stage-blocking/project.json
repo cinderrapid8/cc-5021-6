@@ -1,0 +1,155 @@
+{
+  "format": "blocking-previs/project/1",
+  "name": "stage-blocking-demo",
+  "description": "虚构舞台走位演示：黑匣子剧场内三段调度（入场直行停靠长椅、转向停靠窗台、斜穿停靠门口），另附两段对照片段——场景单位 cm（enter-walk-stop-cm）与根位移 x0.5（turn-to-window-halfroot）——用于帮助使用者辨认单位与根位移的设置差异。",
+  "skeleton": "walker14",
+  "fps": 30,
+  "stage": {
+    "name": "黑匣子实验剧场（虚构）",
+    "units": "m",
+    "size": [8, 6],
+    "marks": [
+      { "id": "bench", "label": "A BENCH", "pos": [0, 0, 2.8], "facingDeg": 180 },
+      { "id": "window", "label": "B WINDOW", "pos": [2.4, 0, 4.6], "facingDeg": 90 },
+      { "id": "door", "label": "C DOOR", "pos": [-2, 0, 5.2], "facingDeg": 180 }
+    ]
+  },
+  "tolerances": {
+    "posM": 0.005,
+    "yawDeg": 0.5,
+    "recombineM": 0.001,
+    "reloadDiff": 0.000001
+  },
+  "segments": [
+    {
+      "id": "enter-walk-stop",
+      "title": "入场·直行停靠长椅",
+      "titleEn": "ENTER WALK STOP",
+      "units": "m",
+      "rootScale": 1,
+      "start": { "pos": [0, 0, 0.5], "yawDeg": 0 },
+      "moves": [
+        { "type": "walkTo", "to": [0, 2.8], "speed": 1.4 },
+        { "type": "turnTo", "yawDeg": 180, "yawRateDeg": 180, "direction": "ccw" },
+        { "type": "wait", "duration": 0.6 }
+      ],
+      "expect": {
+        "stopPos": [0, 0, 2.8],
+        "stopYawDeg": 180,
+        "rootDisplacement": [0, 0, 2.3],
+        "netYawDeg": 180,
+        "markId": "bench",
+        "markDeltaExpected": 0,
+        "rawUnitsScale": 1
+      },
+      "clipAsset": "assets/clips/enter-walk-stop.json"
+    },
+    {
+      "id": "turn-to-window",
+      "title": "转向·停靠窗台",
+      "titleEn": "TURN TO WINDOW",
+      "units": "m",
+      "rootScale": 1,
+      "start": { "pos": [0, 0, 2.8], "yawDeg": 180 },
+      "moves": [
+        { "type": "turnTo", "headingTo": [2.4, 4.6], "yawRateDeg": 150, "direction": "cw" },
+        { "type": "walkTo", "to": [2.4, 4.6], "speed": 1.2 },
+        { "type": "turnTo", "yawDeg": 90, "yawRateDeg": 150, "direction": "ccw" },
+        { "type": "wait", "duration": 0.4 }
+      ],
+      "expect": {
+        "stopPos": [2.4, 0, 4.6],
+        "stopYawDeg": 90,
+        "rootDisplacement": [2.4, 0, 1.8],
+        "netYawDeg": -90,
+        "markId": "window",
+        "markDeltaExpected": 0,
+        "rawUnitsScale": 1
+      },
+      "clipAsset": "assets/clips/turn-to-window.json"
+    },
+    {
+      "id": "cross-to-door",
+      "title": "斜穿·停靠门口",
+      "titleEn": "CROSS TO DOOR",
+      "units": "m",
+      "rootScale": 1,
+      "start": { "pos": [2.4, 0, 4.6], "yawDeg": 90 },
+      "moves": [
+        { "type": "turnTo", "headingTo": [-2, 5.2], "yawRateDeg": 150, "direction": "cw" },
+        { "type": "walkTo", "to": [-2, 5.2], "speed": 1.4 },
+        { "type": "turnTo", "yawDeg": 180, "yawRateDeg": 150, "direction": "cw" },
+        { "type": "wait", "duration": 0.4 }
+      ],
+      "expect": {
+        "stopPos": [-2, 0, 5.2],
+        "stopYawDeg": -180,
+        "rootDisplacement": [-4.4, 0, 0.6],
+        "netYawDeg": -270,
+        "markId": "door",
+        "markDeltaExpected": 0,
+        "rawUnitsScale": 1
+      },
+      "clipAsset": "assets/clips/cross-to-door.json"
+    },
+    {
+      "id": "enter-walk-stop-cm",
+      "title": "入场·直行停靠长椅（厘米单位对照）",
+      "titleEn": "ENTER WALK STOP (CM)",
+      "units": "cm",
+      "rootScale": 1,
+      "start": { "pos": [0, 0, 0.5], "yawDeg": 0 },
+      "moves": [
+        { "type": "walkTo", "to": [0, 2.8], "speed": 1.4 },
+        { "type": "turnTo", "yawDeg": 180, "yawRateDeg": 180, "direction": "ccw" },
+        { "type": "wait", "duration": 0.6 }
+      ],
+      "expect": {
+        "stopPos": [0, 0, 2.8],
+        "stopYawDeg": 180,
+        "rootDisplacement": [0, 0, 2.3],
+        "netYawDeg": 180,
+        "markId": "bench",
+        "markDeltaExpected": 0,
+        "rawUnitsScale": 100
+      },
+      "clipAsset": "assets/clips/enter-walk-stop-cm.json"
+    },
+    {
+      "id": "turn-to-window-halfroot",
+      "title": "转向·停靠窗台（根位移×0.5对照）",
+      "titleEn": "TURN TO WINDOW (ROOT X0.5)",
+      "units": "m",
+      "rootScale": 0.5,
+      "start": { "pos": [0, 0, 2.8], "yawDeg": 180 },
+      "moves": [
+        { "type": "turnTo", "headingTo": [2.4, 4.6], "yawRateDeg": 150, "direction": "cw" },
+        { "type": "walkTo", "to": [2.4, 4.6], "speed": 1.2 },
+        { "type": "turnTo", "yawDeg": 90, "yawRateDeg": 150, "direction": "ccw" },
+        { "type": "wait", "duration": 0.4 }
+      ],
+      "expect": {
+        "stopPos": [1.2, 0, 3.7],
+        "stopYawDeg": 90,
+        "rootDisplacement": [1.2, 0, 0.9],
+        "netYawDeg": -90,
+        "markId": "window",
+        "markDeltaExpected": 1.5,
+        "rawUnitsScale": 1
+      },
+      "clipAsset": "assets/clips/turn-to-window-halfroot.json"
+    }
+  ],
+  "camerasAsset": "assets/cameras.json",
+  "video": {
+    "fps": 12,
+    "width": 480,
+    "height": 270,
+    "titleCardSec": 1
+  },
+  "source": {
+    "generator": "scripts/rebuild-stage-blocking.ts",
+    "createdAt": "2026-11-11",
+    "note": "片段素材由重建脚本按本清单参数烘焙（--bake），每次重建均逐项核验；改动参数后必须重新烘焙并通过核验。"
+  }
+}
